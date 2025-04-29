@@ -23,9 +23,27 @@
       </nav>
     </header>
     <main>
-
+      <section class="saul">
+      <a href="mentionslegales.html"><div class="hover-container" id="hoverBox"></div> </a>
+      <audio id="hoverAudio" src="./Sounds/saulgoodman.mp3" preload="auto"></audio>
+    </section>
+      <script>
+        const box = document.getElementById('hoverBox');
+        const audio = document.getElementById('hoverAudio');
+    
+        box.addEventListener('mouseenter', () => {
+          box.classList.add('hovered');
+          audio.play();
+        });
+    
+        box.addEventListener('mouseleave', () => {
+          box.classList.remove('hovered');
+          audio.pause();
+         
+        });
+      </script>
       <form class="formulaire">
-        <img src="https://i.etsystatic.com/15378848/r/il/6ad64f/4117387728/il_fullxfull.4117387728_hj3t.jpg" alt="better call Saul" class="form-image">
+        
         <h2>Vous avez les questions? Écrivez-nous</h2>
 
         <label>Vos données</label>
